@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="FreeLottoTest" Id="a4b00fa1-27f6-49d6-88e3-85aead369129" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="">
+  <Items>
+    <Loop UniqueStringId="5fc6e070-d978-47ab-a55e-72b9e4b68ea9">
+      <ConditionalRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.CountingLoopRule, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Counting Loop" Description="Executes the requests contained in the loop a specified number of times." MaxIterations="-1" AdvanceDataCursors="False">
+        <RuleParameters>
+          <RuleParameter Name="ContextParameterName" Value="Loop Counter" />
+          <RuleParameter Name="IterationsCount" Value="6" />
+        </RuleParameters>
+      </ConditionalRule>
+      <Items>
+        <Request Method="GET" Version="1.1" Url="{{WebServer1}}/LottoPicker/login.asp" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam107.submitted" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="submitted" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+        <Request Method="POST" Version="1.1" Url="{{WebServer1}}/LottoPicker/login.asp" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://www.freelotto.com/LottoPicker/play.asp" ReportingName="">
+          <DependentRequests>
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SSBanner_LPtest/WINmh_control10_English_728x90.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SS_banners2/wh_scratcherNwin_english_160x600.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SSBanner_LPtest/WINmh_control10_English_728x90.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SS_banners2/wh_scratcherNwin_english_160x600.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+          </DependentRequests>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam98.num1" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num1" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam99.num4" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num4" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam100.num19" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num19" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam101.num24" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num24" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam102.num33" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num33" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam103.num42" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num42" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam104.banner_42490" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value=" id=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; cla" />
+                <RuleParameter Name="Index" Value="13" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam105.fast_yes.x" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&lt;f" />
+                <RuleParameter Name="Index" Value="40" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam106.fast_yes.y" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&lt;f" />
+                <RuleParameter Name="Index" Value="24" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="WhereTo" Value="/LottoPicker/play.asp" RecordedValue="/LottoPicker/play.asp" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="numbers" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="username" Value="{{FreelottoCredentials.vwFreelottoCredentials.FreeLottoUsername}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="password" Value="{{FreelottoCredentials.vwFreelottoCredentials.FreeLottoPassword}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="submitted" Value="Login" RecordedValue="Login" CorrelationBinding="{{FormPostParam107.submitted}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Version="1.1" Url="{{WebServer3}}/hit" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <QueryStringParameters>
+            <QueryStringParameter Name="dom_time" Value="1316" RecordedValue="1316" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="load_time" Value="2457" RecordedValue="2457" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Comment CommentText="$1,000,000.00 USD Daily Jackpot number limits are from 1 to 54 of 6 non-duplication numbers." />
+        <Comment CommentText="WIN A CAR number limits are from 1 to 42 of 6 non-duplicating numbers." />
+        <Comment CommentText="Pay Off Your Mortgage number limits are from 1 to 47 of 6 non-duplicating numbers." />
+        <Comment CommentText="FastCASH $10,000.00 USD number limits are from 1 to 33 of 6 non-duplicating numbers." />
+        <Comment CommentText="$100,000.00 USD Giveaway number limits are from 1 to 47 of 6 non-duplicating numbers." />
+        <Comment CommentText="$10,000,000.00 USD number limits are from 1 to 50 of 7 non-duplication numbers." />
+        <Request Method="POST" Version="1.1" Url="{{WebServer4}}/LottoPicker/playInsert.asp" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://www.freelotto.com/register_7083.asp?skin=7083&amp;playInsert=1&amp;source=15677" ReportingName="">
+          <DependentRequests>
+            <Request Method="POST" Version="1.1" Url="{{WebServer7}}/urs.asmx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+              <Headers>
+                <Header Name="SOAPAction" Value="&quot;http://Microsoft.STS.STSWeb/RepLookup&quot;" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="MSURS-Client-Key" Value="EhdqEbeDdIJdzlUnnLY5Yw%3d%3d" RecordedValue="EhdqEbeDdIJdzlUnnLY5Yw%3d%3d" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="MSURS-Patented-Lock" Value="h%2bZ6LKPL7Bs%3d" RecordedValue="h%2bZ6LKPL7Bs%3d" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+              <StringHttpBody ContentType="text/xml; charset=utf-8" InsertByteOrderMark="False">PABzAG8AYQBwADoARQBuAHYAZQBsAG8AcABlACAAeABtAGwAbgBzADoAcwBvAGEAcAA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AeABtAGwAcwBvAGEAcAAuAG8AcgBnAC8AcwBvAGEAcAAvAGUAbgB2AGUAbABvAHAAZQAvACIAIAB4AG0AbABuAHMAOgB4AHMAaQA9ACIAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAHcAMwAuAG8AcgBnAC8AMgAwADAAMQAvAFgATQBMAFMAYwBoAGUAbQBhAC0AaQBuAHMAdABhAG4AYwBlACIAIAB4AG0AbABuAHMAOgB4AHMAZAA9ACIAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAHcAMwAuAG8AcgBnAC8AMgAwADAAMQAvAFgATQBMAFMAYwBoAGUAbQBhACIAIAB4AG0AbABuAHMAOgBzAG8AYQBwAGUAbgBjAD0AIgBoAHQAdABwADoALwAvAHMAYwBoAGUAbQBhAHMALgB4AG0AbABzAG8AYQBwAC4AbwByAGcALwBzAG8AYQBwAC8AZQBuAGMAbwBkAGkAbgBnAC8AIgA+ADwAcwBvAGEAcAA6AEIAbwBkAHkAPgA8AFIAZQBwAEwAbwBvAGsAdQBwACAAeABtAGwAbgBzAD0AIgBoAHQAdABwADoALwAvAE0AaQBjAHIAbwBzAG8AZgB0AC4AUwBUAFMALgBTAFQAUwBXAGUAYgAvACIAPgA8AEcAPgB7ADIAQwBFAEQAQgBGAEIAQwAtAEQAQgBBADgALQA0ADMAQQBBAC0AQgAxAEYARAAtAEMAQwA4AEUANgAzADEANgBFADMARQAyAH0APAAvAEcAPgA8AE8APgB7ADYAQwAyAEIARABBADQAQQAtADUANgBDADQALQA0ADEAMAA1AC0AOQA2ADMANAAtADMARQBFAEIANQAxAEQANAA5ADUANgAyAH0APAAvAE8APgA8AFAAPgB7ADYAOAAyADgARgAxAEMAOAAtAEYAQwBGADAALQA0ADkANQAwAC0AQgAzADUARgAtAEYARgAyADIAMAA1AEQARgBGADkAMgBBAH0APAAvAFAAPgA8AEQAPgA4AC4AMAAuADYAMAAwADEALgA5ADwALwBEAD4APABDAD4AOAAuADAAMAAuADYAMAAwADEALgAxADgANgA2ADkAPAAvAEMAPgA8AFMAPgA2AC4AMQAuADcANgAwADAALgAwAC4AMAA8AC8AUwA+ADwASQA+ADgALgAwAC4ANwA2ADAAMAAuADEANgAzADgANQA8AC8ASQA+ADwATAA+AGUAbgAtAFUAUwA8AC8ATAA+ADwAUgAgAHgAbQBsAG4AcwA6AHEAMQA9ACIAaAB0AHQAcAA6AC8ALwBNAGkAYwByAG8AcwBvAGYAdAAuAFMAVABTAC4AUwBUAFMAVwBlAGIALwAiACAAcwBvAGEAcABlAG4AYwA6AGEAcgByAGEAeQBUAHkAcABlAD0AIgBxADEAOgBSAHEAWwAxAF0AIgA+ADwAUgBxAD4APABUAD4AVQBSAEwAPAAvAFQAPgA8AFIAPgBoAHQAdABwAHMAOgAvAC8AdwB3AHcALgBmAHIAZQBlAGwAbwB0AHQAbwAuAGMAbwBtAC8AcgBlAGcAaQBzAHQAZQByAF8ANwAwADgAMwAuAGEAcwBwAD8AcwBrAGkAbgA9ADcAMAA4ADMAJgBhAG0AcAA7AHAAbABhAHkASQBuAHMAZQByAHQAPQAxACYAYQBtAHAAOwBzAG8AdQByAGMAZQA9ADEANQA2ADcANwA8AC8AUgA+ADwATwA+AFAAUgBFADwALwBPAD4APABXAD4ARgBSAEEATQBFADwALwBXAD4APAAvAFIAcQA+ADwALwBSAD4APAAvAFIAZQBwAEwAbwBvAGsAdQBwAD4APAAvAHMAbwBhAHAAOgBCAG8AZAB5AD4APAAvAHMAbwBhAHAAOgBFAG4AdgBlAGwAbwBwAGUAPgA=</StringHttpBody>
+            </Request>
+            <Request Method="GET" Version="1.1" Url="{{WebServer5}}/upsellitJS4.jsp" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+              <CorrelationExtractionRules>
+                <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam121.chatID" DisplayName="" Description="">
+                  <RuleParameters>
+                    <RuleParameter Name="StartsWith" Value="?chatID=" />
+                    <RuleParameter Name="EndsWith" Value="&quot;" />
+                    <RuleParameter Name="Index" Value="0" />
+                    <RuleParameter Name="IgnoreCase" Value="False" />
+                    <RuleParameter Name="UseRegularExpression" Value="False" />
+                    <RuleParameter Name="HtmlDecode" Value="True" />
+                    <RuleParameter Name="Required" Value="False" />
+                  </RuleParameters>
+                </ExtractionRule>
+              </CorrelationExtractionRules>
+              <QueryStringParameters>
+                <QueryStringParameter Name="qs" Value="217255226254331307309277297334279324311335324340290327295328" RecordedValue="217255226254331307309277297334279324311335324340290327295328" CorrelationBinding="{{QueryStringParam93.qs}}" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="siteID" Value="3472" RecordedValue="3472" CorrelationBinding="{{QueryStringParam94.siteID}}" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="trackingInfo" Value="/register_7083.asp%3Fskin%3D7083%26tempid%3D%26lang%3Den%26noepu%3D1%26partner%3D15677%26affiliateid%3D%26upchat%3Dtrue" RecordedValue="/register_7083.asp%3Fskin%3D7083%26tempid%3D%26lang%3Den%26noepu%3D1%26partner%3D15677%26affiliateid%3D%26upchat%3Dtrue" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Version="1.1" Url="{{WebServer5}}/chat_slim.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+          </DependentRequests>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam93.qs" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?qs=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam94.siteID" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="&amp;siteID=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="playgame" Value="{{$HIDDEN1.playgame}}" RecordedValue="" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="clickedhotpicks" Value="{{$HIDDEN1.clickedhotpicks}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="sweep_type" Value="{{$HIDDEN1.sweep_type}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="sweep_id" Value="{{$HIDDEN1.sweep_id}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="numbers" Value="{{$HIDDEN1.numbers}}" RecordedValue="javaisfubar" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="source" Value="{{$HIDDEN1.source}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="gameno" Value="{{$HIDDEN1.gameno}}" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="arg1" Value="{{$HIDDEN1.arg1}}" RecordedValue="1744665122" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="playgame" Value="{{$HIDDEN1.playgame}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="num1" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam98.num1}}" UrlEncode="True" />
+            <FormPostParameter Name="num4" Value="4" RecordedValue="4" CorrelationBinding="{{FormPostParam99.num4}}" UrlEncode="True" />
+            <FormPostParameter Name="num19" Value="19" RecordedValue="19" CorrelationBinding="{{FormPostParam100.num19}}" UrlEncode="True" />
+            <FormPostParameter Name="num24" Value="24" RecordedValue="24" CorrelationBinding="{{FormPostParam101.num24}}" UrlEncode="True" />
+            <FormPostParameter Name="num33" Value="33" RecordedValue="33" CorrelationBinding="{{FormPostParam102.num33}}" UrlEncode="True" />
+            <FormPostParameter Name="num42" Value="42" RecordedValue="42" CorrelationBinding="{{FormPostParam103.num42}}" UrlEncode="True" />
+            <FormPostParameter Name="text" Value="1,4,19,24,33,42" RecordedValue="1,4,19,24,33,42" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="intervalType42490" Value="{{$HIDDEN1.intervalType42490}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="slot42490" Value="{{$HIDDEN1.slot42490}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="banner_42490" Value="banner_42490" RecordedValue="banner_42490" CorrelationBinding="{{FormPostParam104.banner_42490}}" UrlEncode="True" />
+            <FormPostParameter Name="fast_yes.x" Value="24" RecordedValue="24" CorrelationBinding="{{FormPostParam105.fast_yes.x}}" UrlEncode="True" />
+            <FormPostParameter Name="fast_yes.y" Value="8" RecordedValue="8" CorrelationBinding="{{FormPostParam106.fast_yes.y}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Version="1.1" Url="{{WebServer1}}/xmljs/countrystate.asp" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <QueryStringParameters>
+            <QueryStringParameter Name="cid" Value="United%20States" RecordedValue="United%20States" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="rid" Value="0.9216831541026262" RecordedValue="0.9216831541026262" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Version="1.1" Url="{{WebServer6}}/httpPost.jsp" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <QueryStringParameters>
+            <QueryStringParameter Name="command" Value="OPENER" RecordedValue="OPENER" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="chatID" Value="1347701059591396835402" RecordedValue="1347701059591396835402" CorrelationBinding="{{QueryStringParam121.chatID}}" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="msg" Value="%3Cb%3EAshley%20Says%3A%3C/b%3E%20Hey%20wait%21%20We%20hate%20to%20see%20you%20go.%20Millionaires%20are%20made%20here%20at%20FreeLotto%20and%20you%20could%20be%20our%20next%20big%20winner%21%20Sign%20up%20to%20the%20F.A.S.T.%20%28FreeLotto%20Automatic%20Subscription%20Ticket%29%20service%20now%20for%20automated%20daily%20game%20entry%20and%20receive%20a%20%245%20OFF%20your%20first%20Month%21%3Cbr%3E%3Cbr%3E%20%3Ca%20href%3D%27asfunction%3A_root.openAndRecord%2CLINK1%2C1%27%3E%3Cfont%20color%3D%27%231E00FF%27%3E%3Cb%3ECLICK%20HERE%3C/b%3E%3C/font%3E%3C/a%3E%20to%20claim%20this%20special%20one-time%20Chat%20Bonus%20and%20start%20playing%20for%20your%20chance%20at%20winning%20over%20%2411%2C000%2C000%20in%20daily%20cash%20and%20prizes%21" RecordedValue="%3Cb%3EAshley%20Says%3A%3C/b%3E%20Hey%20wait%21%20We%20hate%20to%20see%20you%20go.%20Millionaires%20are%20made%20here%20at%20FreeLotto%20and%20you%20could%20be%20our%20next%20big%20winner%21%20Sign%20up%20to%20the%20F.A.S.T.%20%28FreeLotto%20Automatic%20Subscription%20Ticket%29%20service%20now%20for%20automated%20daily%20game%20entry%20and%20receive%20a%20%245%20OFF%20your%20first%20Month%21%3Cbr%3E%3Cbr%3E%20%3Ca%20href%3D%27asfunction%3A_root.openAndRecord%2CLINK1%2C1%27%3E%3Cfont%20color%3D%27%231E00FF%27%3E%3Cb%3ECLICK%20HERE%3C/b%3E%3C/font%3E%3C/a%3E%20to%20claim%20this%20special%20one-time%20Chat%20Bonus%20and%20start%20playing%20for%20your%20chance%20at%20winning%20over%20%2411%2C000%2C000%20in%20daily%20cash%20and%20prizes%21" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="version" Value="WIN+10,1,102,64" RecordedValue="WIN+10,1,102,64" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="sess" Value="AAC6CAD63E6D803BC879C0B9E70000B1" RecordedValue="AAC6CAD63E6D803BC879C0B9E70000B1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="r1" Value="5004" RecordedValue="5004" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="r2" Value="5753" RecordedValue="5753" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="cID" Value="1347701059591396835402" RecordedValue="1347701059591396835402" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Version="1.1" Url="{{WebServer4}}/LottoPicker/play.asp" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <DependentRequests>
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SSBanner_LPtest/WINmh_control10_English_728x90.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SSBanner_LPtest/WINmh_control10_English_728x90.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SS_banners2/wh_scratcherNwin_english_160x600.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+            <Request Method="GET" Version="1.1" Url="{{WebServer2}}/www.freelotto.com//dynamic/akamaizer/SS_banners2/wh_scratcherNwin_english_160x600.swf" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+          </DependentRequests>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam90.num9" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num9" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam91.num15" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num15" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam92.num23" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num23" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam93.num29" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num29" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam94.num39" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num39" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam95.num49" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="num49" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam96.banner_42490" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value=" id=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; cla" />
+                <RuleParameter Name="Index" Value="13" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam97.fast_yes.y" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&lt;f" />
+                <RuleParameter Name="Index" Value="25" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam108.fast_yes.x" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&lt;f" />
+                <RuleParameter Name="Index" Value="60" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam110.fast_yes.x" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&lt;f" />
+                <RuleParameter Name="Index" Value="65" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+        <Request Method="GET" Version="1.1" Url="{{WebServer3}}/hit" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <QueryStringParameters>
+            <QueryStringParameter Name="dom_time" Value="244" RecordedValue="244" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="load_time" Value="450" RecordedValue="450" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </Loop>
+  </Items>
+  <DataSources>
+    <DataSource Name="FreelottoCredentials" Provider="System.Data.SqlClient" Connection="Data Source=MATT-SERVER;Initial Catalog=MySecureParameters;Integrated Security=True">
+      <Tables>
+        <DataSourceTable Name="vwFreelottoCredentials" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="WebServer1" Value="https://www.freelotto.com" />
+    <ContextParameter Name="WebServer2" Value="http://i.pinid.com" />
+    <ContextParameter Name="WebServer3" Value="http://fl9875309.b.circonus.com:0" />
+    <ContextParameter Name="WebServer4" Value="http://www.freelotto.com" />
+    <ContextParameter Name="WebServer5" Value="https://www.upsellit.com" />
+    <ContextParameter Name="WebServer6" Value="http://www.upsellit.com" />
+    <ContextParameter Name="WebServer7" Value="https://urs.microsoft.com" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>
